@@ -6,37 +6,47 @@
   <title>Raju Tech Lab | Android & IoT Expert</title>
   <style>
     body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #f8f9fa; }
-    header { background: #0d6efd; color: white; padding: 60px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 42px; }
-    header p { font-size: 18px; opacity: 0.9; }
-    .btn { display: inline-block; margin: 10px 6px; padding: 14px 24px; background: #fff; color: #0d6efd; border-radius: 6px; text-decoration: none; font-weight: bold; }
     
-    nav { background: white; padding: 12px 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: sticky; top: 0; }
+    nav { background: white; padding: 12px 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
     nav a { margin-right: 20px; text-decoration: none; color: #0d6efd; font-weight: 500; }
+    
+    header { background: linear-gradient(135deg,#0d6efd,#003f9e); color: white; padding: 80px 20px; text-align: center; }
+    header h1 { margin:0; font-size: 46px; }
+    header p { font-size: 18px; opacity:0.9; }
+    .btn { display: inline-block; margin: 12px 6px; padding: 14px 24px; background: #fff; color: #0d6efd; border-radius: 6px; text-decoration: none; font-weight: bold; }
 
-    section { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-    h2 { color: #0d6efd; text-align: center; margin-bottom: 18px; }
-    
-    .stats { display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 30px; }
-    .stat { background: white; padding: 25px; border-radius: 8px; width: 200px; text-align: center; box-shadow: 0 6px 14px rgba(0,0,0,0.05); }
-    .stat h3 { margin: 0; font-size: 32px; color: #0d6efd; }
-    
-    .services, .projects, .apps { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 18px; }
-    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 6px 14px rgba(0,0,0,0.06); }
-    .card h3 { margin-top: 0; color: #0d6efd; }
-    
-    .contact { text-align: center; margin: 30px 0; }
-    .contact a { margin: 6px; padding: 12px 22px; background: #0d6efd; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; }
-    
-    footer { background: #111; color: white; text-align: center; padding: 18px 10px; margin-top: 40px; }
+    section { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+    h2 { text-align:center; margin-bottom:30px; padding:15px 0; border-radius:8px; color:white; }
+
+    /* Stylish section headers */
+    .stats h2 { background: linear-gradient(90deg,#0d6efd,#003f9e); }
+    .about h2 { background: linear-gradient(90deg,#28a745,#218838); }
+    .services h2 { background: linear-gradient(90deg,#fd7e14,#e8590c); }
+    .projects h2 { background: linear-gradient(90deg,#6f42c1,#563d7c); }
+    .apps h2 { background: linear-gradient(90deg,#20c997,#198754); }
+    .savi h2 { background: linear-gradient(90deg,#6610f2,#520dc2); }
+    .contact h2 { background: linear-gradient(90deg,#dc3545,#a71d2a); }
+
+    .stats, .projects, .apps, .savi { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 18px; }
+    .stat, .card, .app { background:white; border-radius:8px; padding:20px; box-shadow:0 6px 14px rgba(0,0,0,0.06); text-align:center; }
+    .stat h3 { margin:0; font-size:32px; color:#0d6efd; }
+    .card h3 { margin-top:0; color:#0d6efd; }
+    .app a { text-decoration:none; color:#0d6efd; font-weight:600; }
+
+    .contact { text-align:center; margin:30px 0; }
+    .contact a { margin:6px; padding:12px 22px; background:#0d6efd; color:white; border-radius:6px; text-decoration:none; font-weight:bold; }
+
+    footer { background:#111; color:white; text-align:center; padding:18px 10px; margin-top:40px; }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="#stats">About</a>
+  <a href="#about">About</a>
+  <a href="#stats">Stats</a>
   <a href="#services">Skills</a>
   <a href="#projects">Projects</a>
+  <a href="#savi">Savi</a>
   <a href="#apps">Apps</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -48,41 +58,57 @@
   <a class="btn" href="#apps">View Apps</a>
 </header>
 
-<section id="stats">
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am a professional Android Developer with over <strong>5 years of experience</strong> building high-quality mobile applications across multiple domains. 
+      My expertise includes gaming apps, utility apps, OTT platforms, e-commerce, IoT devices, and Android/Google TV solutions. 
+      I have successfully delivered more than <strong>100 projects</strong> for over <strong>50 clients</strong>, implementing scalable and maintainable solutions with Kotlin, Java, Jetpack Compose, MVVM architecture, Firebase, and other modern technologies. 
+      My focus is on creating robust, user-friendly, and visually appealing apps that meet client expectations and enhance user experience.
+    </p>
+  </div>
+</section>
+
+<section id="stats" class="stats">
   <h2>Professional Stats</h2>
-  <div class="stats">
-    <div class="stat"><h3>50+</h3><p>Clients</p></div>
-    <div class="stat"><h3>100+</h3><p>Projects</p></div>
-    <div class="stat"><h3>10+</h3><p>Expertise Types</p></div>
-  </div>
+  <div class="stat"><h3>50+</h3><p>Clients</p></div>
+  <div class="stat"><h3>100+</h3><p>Projects</p></div>
+  <div class="stat"><h3>10+</h3><p>Expertise Types</p></div>
 </section>
 
-<section id="services">
+<section id="services" class="services">
   <h2>Services & Expertise</h2>
-  <div class="services">
-    <div class="card"><h3>Social Apps</h3><p>Custom communication & social platforms.</p></div>
-    <div class="card"><h3>E-commerce Apps</h3><p>Shopping, payments & secure checkout.</p></div>
-    <div class="card"><h3>Android & Google TV</h3><p>Streaming & smart TV solutions.</p></div>
-    <div class="card"><h3>IoT Devices</h3><p>HP Printers, Kodak, Zink & other smart hardware.</p></div>
-  </div>
+  <div class="card"><h3>Social Apps</h3><p>Custom communication & social platforms.</p></div>
+  <div class="card"><h3>E-commerce Apps</h3><p>Shopping, payments & secure checkout.</p></div>
+  <div class="card"><h3>Android & Google TV</h3><p>Streaming & smart TV solutions.</p></div>
+  <div class="card"><h3>IoT Devices</h3><p>HP Printers, Kodak, Zink & other smart hardware integration.</p></div>
 </section>
 
-<section id="projects">
+<section id="projects" class="projects">
   <h2>Featured Projects</h2>
-  <div class="projects">
-    <div class="card"><h3>Winzy – Gaming App</h3><p>Skill based game platform with Firebase backend.</p></div>
-    <div class="card"><h3>Step & Earn App</h3><p>Fitness + reward system using Sensor API.</p></div>
-    <div class="card"><h3>EMIGuru</h3><p>Finance utility (EMI & GST calculator).</p></div>
+  <div class="card"><h3>Winzy – Gaming App</h3><p>Skill based game platform with Firebase backend.</p></div>
+  <div class="card"><h3>Step & Earn App</h3><p>Fitness + reward system using Sensor API.</p></div>
+  <div class="card"><h3>EMIGuru</h3><p>Finance utility (EMI & GST calculator).</p></div>
+</section>
+
+<section id="savi" class="savi">
+  <h2>Savi Project</h2>
+  <div class="card">
+    <h3>Savi – Multi-functional App</h3>
+    <p>
+      Savi is a versatile Android application designed to track, manage, and reward labor work efficiently. 
+      It includes features for supervisors ('Thikedar') and laborers ('Dehari'), with real-time tracking, secure wallet system, and task management. 
+      Built using Kotlin, MVVM, Room Database, Firebase, and modern UI design principles, it demonstrates my ability to handle complex project logic and real-time data synchronization.
+    </p>
   </div>
 </section>
 
-<section id="apps">
+<section id="apps" class="apps">
   <h2>Personal Apps</h2>
-  <div class="apps">
-    <div class="card"><p><a href="#" target="_blank">Step & Earn</a></p></div>
-    <div class="card"><p><a href="#" target="_blank">Winzy</a></p></div>
-    <div class="card"><p><a href="#" target="_blank">EMIGuru</a></p></div>
-  </div>
+  <div class="app"><a href="#" target="_blank">Step & Earn</a></div>
+  <div class="app"><a href="#" target="_blank">Winzy</a></div>
+  <div class="app"><a href="#" target="_blank">EMIGuru</a></div>
 </section>
 
 <section id="contact">
@@ -90,6 +116,8 @@
   <div class="contact">
     <a href="mailto:rajutechlab@gmail.com">Email Me</a>
     <a href="https://wa.me/919876543210" target="_blank">WhatsApp</a>
+    <a href="#hire">Hire Me</a>
+    <a href="#apps">Buy App</a>
   </div>
 </section>
 
